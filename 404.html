@@ -1,1 +1,7 @@
-Oops! 404 Error.
+Oops! 404 Error.<script>
+var url = window.location.href;
+var str = url;
+var n = str.lastIndexOf('/');
+var result = str.substring(n + 1);
+document.write(result);
+</script>
