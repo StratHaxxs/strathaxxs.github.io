@@ -1,7 +1,15 @@
-<iframe src="http://10.0.0.50" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%"><script>
+<body onload="set()">
+<iframe src="http://10.0.0.50" id="iframe_id" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%">
+<script>
 var url = window.location.href;
 var str = url;
 var n = str.lastIndexOf('/');
 var result = str.substring(n + 1);
 document.write(result);
+function get() {
+console.log(document.getElementById("iframe_id").contentWindow.location.href)
+}
+function set() {
+setInterval(get,3000);
+}
 </script>
