@@ -5,9 +5,16 @@ var n = str.lastIndexOf('/');
 var result = str.substring(n + 1);
 document.write(result);
 function get() {
-console.log(document.getElementById("iframe_id").contentWindow.location.href)
-}
+window.addEventListener("message", function(event) {
+    console.log("Hello from " + event.data);
+});
+
+$("a").click(function () {
+     var $urls = $(this).attr("title");
+    $("#iframe_id").attr("src", $urls);
+     return false;
+  });}
 </script>
 
 <body onload="setInterval(get,3000);">
-<iframe src="http://10.0.0.50" id="iframe_id" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%">
+<iframe src="http://10.0.0.50" class="iframe_id" id="iframe_id" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%">
