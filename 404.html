@@ -1,3 +1,4 @@
+<script>var website = "http://10.0.0.50/";</script>
 <script>
 function set() {
 var url = window.location.href;
@@ -5,7 +6,7 @@ var str = url;
 var n = str.lastIndexOf('/');
 var result = str.substring(n + 1);
 var result = url.split("/").pop();
-document.getElementById('iframe_id').src = "http://10.0.0.50/"+result;
+document.getElementById('iframe_id').src = website+result;
 }
 </script>
 <body onload="set()">
