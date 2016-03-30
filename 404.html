@@ -1,15 +1,11 @@
 <script>
+function set() {
 var url = window.location.href;
 var str = url;
 var n = str.lastIndexOf('/');
 var result = str.substring(n + 1);
-document.write(result);
-function get() {
-window.addEventListener("message", function(event) {
-    console.log("Hello from " + event.data);
-});
+document.getElementById('iframe_id').src = "10.0.0.50"+result;
 }
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<body onload="setInterval(get,1);">
-<iframe onload="setInterval(get,1);" src="http://10.0.0.50" class="iframe_id" id="iframe_id" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%">
+<body onload="set()">
+<iframe src= class="iframe_id" id="iframe_id" style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%">
