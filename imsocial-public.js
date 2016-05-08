@@ -1,7 +1,7 @@
 /*
 ====================
-               I'm Social
-		    by StratHaxxs
+I'm Social
+by StratHaxxs
 ====================
 This public version of this code
 has been encrypted to prevent
